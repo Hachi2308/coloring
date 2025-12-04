@@ -1,0 +1,5 @@
+{
+  "name": "Coloring Book",
+  "description": "Generate ultra-realistic macro photography images using Google Gemini 2.5 Flash. Features multi-angle generation and simulated transparent backgrounds.",
+  "requestFramePermissions": []
+}

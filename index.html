@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trung Coloring Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              studio: {
+                black: '#fff1f2', // Rose 50 (Main Background)
+                dark: '#ffffff',  // White
+                accent: '#f9a8d4', // Pink 300 (Softer Pastel Pink)
+                accentHover: '#f472b6', // Pink 400
+                light: '#fbcfe8',   // Pink 200
+                text: '#000000',    // Black (High Contrast)
+                muted: '#6b7280'    // Gray 500
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        color-scheme: light; /* Forces browser controls (like number spinners) to be light */
+      }
+      body {
+        background-color: #fff1f2; 
+        color: #000000; 
+        font-family: 'Inter', sans-serif;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fff1f2; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #fbcfe8; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #f9a8d4; 
+      }
+
+      /* Fix Number Input Arrows (Spin Buttons) */
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        opacity: 1; 
+        height: 30px; /* Taller touch target */
+        cursor: pointer;
+        filter: invert(0); /* Ensure no dark mode inversion */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "jszip": "https://esm.run/jszip"
+  }
+}
+</script>
+<!-- Google API Scripts -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://apis.google.com/js/api.js" async defer></script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
